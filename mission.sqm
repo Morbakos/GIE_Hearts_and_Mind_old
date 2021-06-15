@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4571.292,25.349646,994.73975};
-		dir[]={-0.4793607,-0.53635478,-0.6946497};
-		up[]={-0.30463251,0.84399205,-0.44144773};
-		aside[]={-0.82305127,-3.608875e-009,0.56796795};
+		pos[]={4486.4238,154.01105,330.27209};
+		dir[]={0.077158391,-0.75534791,0.65082633};
+		up[]={0.088927001,0.65532398,0.7500968};
+		aside[]={0.99307692,-1.0832446e-007,-0.11773495};
 	};
 };
 binarizationWanted=0;
@@ -19928,7 +19928,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4571.6299,1.9548478,980.01001};
+				position[]={4571.8535,1.9410688,980.24463};
 				angles[]={0,0.68432611,0};
 			};
 			side="Empty";
@@ -19939,7 +19939,7 @@ class Mission
 			};
 			id=469;
 			type="O_T_Boat_Armed_01_hmg_F";
-			atlOffset=6.52;
+			atlOffset=6.5917802;
 			class CustomAttributes
 			{
 				class Attribute0
