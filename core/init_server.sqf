@@ -57,4 +57,4 @@ if (btc_p_side_mission_cycle > 0) then {
 } forEach ["ACE_SpraypaintRed"];
 
 // Custom FOB for ships
-[[13357.2,13804.7,0], random 360, "Base VMF"] call btc_fnc_fob_create_s;
+[[4542.72,984.863,1.90181], 40, "Base VMF"] call btc_fnc_fob_create_s;
