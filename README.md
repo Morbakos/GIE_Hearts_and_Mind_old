@@ -8,9 +8,9 @@
 * *(par extention)* le staff GIE: Administration
 
 ### Contacts projet
-* machin: responsable formation T90/BTR
-* truc: responsable formation équipage hélico
-* bidule: responsable groupe Spetsnaz
+* TBD : responsable formation T90/BTR
+* TBD : responsable formation équipage hélico
+* TBD : responsable groupe Spetsnaz
 
 
 ## Information sur la version actuelle
