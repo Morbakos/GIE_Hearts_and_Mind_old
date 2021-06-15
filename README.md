@@ -15,7 +15,7 @@
 
 ## Information sur la version actuelle
 
-**Carte:** Chernarus Summer
+**Carte:** Fapovo
 
 **Faction:** Régiment de VDV (parachutistes russes ) renforcé avec des unités des TV (unités blindées)
 
@@ -27,6 +27,6 @@
 **Version:** `1.0.0`
 
 ## Comment installer la mission pour le dev:
-* Créer un dossier `GIE_hearts_and_mind.chernarus_summer` dans `Document/ArmA3 Other Profiles/MPMissions`
+* Créer un dossier `GIE_hearts_and_mind_v2.fapovo` dans `Document/ArmA3 Other Profiles/MPMissions`
 * Cloner le repo dans ce dossier
 * Enjoy !
