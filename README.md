@@ -17,7 +17,7 @@
 
 **Carte:** Fapovo
 
-**Faction:** Régiment de VDV (parachutistes russes ) renforcé avec des unités des TV (unités blindées)
+**Faction:** Régiment de VDV (parachutistes russes) renforcé avec des unités des TV (unités blindées)
 
 **Spécialités:**
 * Équipage de char/véhicule blindé type BTR
