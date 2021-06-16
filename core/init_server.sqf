@@ -58,3 +58,9 @@ if (btc_p_side_mission_cycle > 0) then {
 
 // Custom FOB for ships
 [[4542.72,984.863,1.90181], 40, "Base VMF"] call btc_fnc_fob_create_s;
+
+private _ship_weapons = [ship_turret_1, ship_turret_2, ship_turret_3, ship_turret_4, ship_turret_5];
+{
+    private _group = createGroup [btc_player_side, true];
+    [_x] join _group;
+} forEach _ship_weapons;
