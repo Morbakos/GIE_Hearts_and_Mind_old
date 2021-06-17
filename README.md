@@ -20,9 +20,35 @@
 **Faction:** Régiment de VDV (parachutistes russes) renforcé avec des unités des TV (unités blindées)
 
 **Spécialités:**
-* Équipage de char/véhicule blindé type BTR
-* Équipage d'hélicoptère
-* Spetsnaz (forces spéciales)
+* Infantrie (Disponible sans formation) :
+  - AA
+  - EOD
+  - FU
+  - GL
+  - HAT
+  - LMG (PKP et RPK)
+  - JTAC°
+  - LAT
+  - MEDIC
+  - TE
+  - TP
+  - SL/TL°
+
+* Infantrie (Disponible après formation) :
+  - Plongeur
+  - Spetnaz (FS)
+
+* Équipage de char/véhicule blindé (Disponible après formation) :
+  - T-90
+  - BTR-80
+
+* Équipage d'hélicoptère (Disponible après formation) :
+  - Ka-60
+  - Mi-24P
+  - Mi-24V
+  - Mi-8T
+
+ *(° sous réserve d'être un joueur reconnu par le GIE)*
 
 **Version:** `1.0.0`
 
