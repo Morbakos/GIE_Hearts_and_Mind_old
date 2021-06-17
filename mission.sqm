@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=829;
+		nextID=835;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4581.7241,52.098984,1038.8101};
-		dir[]={-0.51444024,-0.51283181,-0.68728858};
-		up[]={-0.30731028,0.85848439,-0.41056475};
-		aside[]={-0.80057615,1.3154931e-008,0.59923685};
+		pos[]={4549.6211,30.881821,1019.3873};
+		dir[]={-0.43333074,-0.75433934,-0.49318922};
+		up[]={-0.49789977,0.65648198,-0.56667829};
+		aside[]={-0.7512368,-3.632158e-007,0.6600588};
 	};
 };
 binarizationWanted=0;
@@ -70,13 +70,14 @@ addons[]=
 	"A3_Static_F_Destroyer_Ship_Gun_01",
 	"A3_Static_F_Destroyer_Ship_MRLS_01",
 	"A3_Static_F_Jets_AAA_System_01",
-	"A3_Static_F_Jets_SAM_System_01"
+	"A3_Static_F_Jets_SAM_System_01",
+	"A3_Boat_F_Boat_Transport_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=38;
+		items=39;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -332,6 +333,13 @@ class AddonsMetaData
 		{
 			className="A3_Static_F_Jets";
 			name="Arma 3 Jets - Turrets";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item38
+		{
+			className="A3_Boat_F";
+			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -34780,7 +34788,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=183;
+		items=187;
 		class Item0
 		{
 			dataType="Marker";
@@ -44178,17 +44186,181 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4550.4575,7.284874,993.28925};
+				position[]={4550.4575,5.9002352,993.28925};
 				angles[]={0,3.7910001,0};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 			};
 			id=827;
 			type="Land_LampAirport_F";
-			atlOffset=1.1452765;
+			atlOffset=-0.23936224;
+		};
+		class Item183
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4545.8081,0.79409885,999.578};
+				angles[]={0,0.66346943,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true];}";
+				name="btc_boat_5";
+			};
+			id=830;
+			type="O_Boat_Transport_01_F";
+			atlOffset=6.3179994;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item184
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4542.5342,1.2436991,1002.617};
+				angles[]={0,0.66346943,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true];}";
+				name="btc_boat_6";
+			};
+			id=832;
+			type="O_Boat_Transport_01_F";
+			atlOffset=6.7410002;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item185
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4538.2358,1.2432752,1005.828};
+				angles[]={0,0.66346943,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true];}";
+				name="btc_boat_7";
+			};
+			id=833;
+			type="O_Boat_Transport_01_F";
+			atlOffset=6.3080001;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item186
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4533.27,1.2436519,1009.67};
+				angles[]={0,0.66346943,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true];}";
+				name="btc_boat_8";
+			};
+			id=834;
+			type="O_Boat_Transport_01_F";
+			atlOffset=6.3530002;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
