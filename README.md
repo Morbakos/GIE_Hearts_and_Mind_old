@@ -20,7 +20,7 @@
 **Faction:** Régiment de VDV (parachutistes russes) renforcé avec des unités des TV (unités blindées)
 
 **Spécialités:**
-* Infantrie (Disponible sans formation) :
+* Infanterie (Disponible sans formation) :
   - AA
   - EOD
   - FU
