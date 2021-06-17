@@ -286,7 +286,7 @@ if (isServer) then {
     //BTC Vehicles in missions.sqm
     btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19];
     btc_helos = [btc_helo_1, btc_helo_2, btc_helo_3, btc_helo_4, btc_helo_5];
-    btc_boats = [btc_boat_1, btc_boat_2, btc_boat_3, btc_boat_4, btc_boat_5, btc_boat_6, btc_boat_7, btc_boat_8];
+    btc_boats = [btc_boat_1, btc_boat_2, btc_boat_3, btc_boat_4, btc_boat_5, btc_boat_6, btc_boat_7, btc_boat_8, btc_boat_9, btc_boat_10, btc_boat_11, btc_boat_12];
     btc_tanks = [btc_tank_1, btc_tank_2, btc_tank_3, btc_tank_4];
 
     // The two arrays below are prefixes of buildings and their multiplier.

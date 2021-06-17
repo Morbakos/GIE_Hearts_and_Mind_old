@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=843;
+		nextID=852;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4413.0073,11.084462,489.21207};
-		dir[]={-0.70006508,-0.53724062,-0.47040558};
-		up[]={-0.44592178,0.84342897,-0.29963514};
-		aside[]={-0.55772984,0,0.83002245};
+		pos[]={10581.37,15.904004,4320.7559};
+		dir[]={0.75083458,-0.66018468,0.020436358};
+		up[]={0.65994358,0.75110281,0.017962631};
+		aside[]={0.02720814,2.7182978e-008,-0.99963677};
 	};
 };
 binarizationWanted=0;
@@ -71,13 +71,14 @@ addons[]=
 	"A3_Static_F_Destroyer_Ship_MRLS_01",
 	"A3_Static_F_Jets_AAA_System_01",
 	"A3_Static_F_Jets_SAM_System_01",
-	"A3_Boat_F_Boat_Transport_01"
+	"A3_Boat_F_Boat_Transport_01",
+	"A3_Boat_F_Beta_SDV_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=39;
+		items=40;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -340,6 +341,13 @@ class AddonsMetaData
 		{
 			className="A3_Boat_F";
 			name="Arma 3 Alpha - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item39
+		{
+			className="A3_Boat_F_Beta";
+			name="Arma 3 Beta - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -34788,7 +34796,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=195;
+		items=199;
 		class Item0
 		{
 			dataType="Marker";
@@ -43612,8 +43620,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5395.3188,0.043998718,-1879.61};
-				angles[]={0,4.5396538,0};
+				position[]={10614.938,-0.32832336,4395.4995};
+				angles[]={0,3.1249428,0};
 			};
 			side="Empty";
 			class Attributes
@@ -43621,7 +43629,7 @@ class Mission
 			};
 			id=771;
 			type="Land_Destroyer_01_base_F";
-			atlOffset=41.903999;
+			atlOffset=41.531677;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43753,8 +43761,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5473.3779,12.154439,-1866.0669};
-						angles[]={6.2786999,1.3781643,0.025691247};
+						position[]={10613.742,11.782117,4474.7578};
+						angles[]={6.2571087,6.2466388,6.2826972};
 					};
 					side="West";
 					flags=6;
@@ -43764,7 +43772,7 @@ class Mission
 					};
 					id=775;
 					type="B_UAV_AI";
-					atlOffset=0.013190269;
+					atlOffset=0.013178825;
 				};
 			};
 			class Attributes
@@ -43793,15 +43801,15 @@ class Mission
 				};
 			};
 			id=773;
-			atlOffset=0.013190269;
+			atlOffset=0.013178825;
 		};
 		class Item168
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5473.3779,14.891899,-1866.1169};
-				angles[]={6.2786999,1.3781643,0.025691247};
+				position[]={10613.742,14.519577,4474.7075};
+				angles[]={6.2571087,6.2466388,6.2826972};
 			};
 			side="West";
 			flags=6;
@@ -43812,7 +43820,7 @@ class Mission
 			};
 			id=774;
 			type="B_Ship_Gun_01_F";
-			atlOffset=0.013190269;
+			atlOffset=0.013178825;
 		};
 		class Item169
 		{
@@ -43826,8 +43834,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5456.792,10.544438,-1868.845};
-						angles[]={0,1.4022499,0};
+						position[]={10613.909,10.172116,4457.9414};
+						angles[]={6.2761602,6.2707243,-0};
 					};
 					side="West";
 					flags=2;
@@ -43837,7 +43845,7 @@ class Mission
 					};
 					id=778;
 					type="B_UAV_AI";
-					atlOffset=52.403;
+					atlOffset=52.030678;
 				};
 			};
 			class Attributes
@@ -43866,15 +43874,15 @@ class Mission
 				};
 			};
 			id=776;
-			atlOffset=52.403;
+			atlOffset=52.03067;
 		};
 		class Item170
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5456.792,11.916504,-1868.899};
-				angles[]={0,1.4022499,0};
+				position[]={10613.909,11.544182,4457.8872};
+				angles[]={6.2761602,6.2707243,-0};
 			};
 			side="West";
 			flags=2;
@@ -43885,7 +43893,7 @@ class Mission
 			};
 			id=777;
 			type="B_Ship_MRLS_01_F";
-			atlOffset=52.403;
+			atlOffset=52.03067;
 		};
 		class Item171
 		{
@@ -43899,8 +43907,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5442.3291,15.227437,-1871.412};
-						angles[]={0,1.4005919,0};
+						position[]={10614.196,14.854962,4443.2275};
+						angles[]={0,6.2690663,0};
 					};
 					side="West";
 					flags=6;
@@ -43910,7 +43918,7 @@ class Mission
 					};
 					id=781;
 					type="B_UAV_AI";
-					atlOffset=0.094076157;
+					atlOffset=0.093923569;
 				};
 			};
 			class Attributes
@@ -43939,15 +43947,15 @@ class Mission
 				};
 			};
 			id=779;
-			atlOffset=0.093925476;
+			atlOffset=0.23341274;
 		};
 		class Item172
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5442.3022,17.731604,-1871.4672};
-				angles[]={0,1.4005919,0};
+				position[]={10614.196,17.35928,4443.1772};
+				angles[]={0,6.2690663,0};
 			};
 			side="West";
 			flags=6;
@@ -43958,7 +43966,7 @@ class Mission
 			};
 			id=780;
 			type="B_AAA_System_01_F";
-			atlOffset=0.093925476;
+			atlOffset=0.23341274;
 		};
 		class Item173
 		{
@@ -43972,8 +43980,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5359.686,19.262436,-1885.6069};
-						angles[]={0,4.5476651,0};
+						position[]={10615.371,18.890114,4359.4102};
+						angles[]={-0,3.1329541,0};
 					};
 					side="West";
 					flags=6;
@@ -44012,15 +44020,15 @@ class Mission
 				};
 			};
 			id=782;
-			atlOffset=0.00024986267;
+			atlOffset=0.072393417;
 		};
 		class Item174
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5359.686,21.766754,-1885.657};
-				angles[]={0,4.5476651,0};
+				position[]={10615.371,21.394432,4359.3599};
+				angles[]={-0,3.1329541,0};
 			};
 			side="West";
 			flags=6;
@@ -44031,7 +44039,7 @@ class Mission
 			};
 			id=783;
 			type="B_AAA_System_01_F";
-			atlOffset=0.00024986267;
+			atlOffset=0.072393417;
 		};
 		class Item175
 		{
@@ -44045,8 +44053,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5345.5439,15.820439,-1888.3359};
-						angles[]={0,4.5619063,0};
+						position[]={10615.869,15.448117,4345.0156};
+						angles[]={-0,3.1471953,0};
 					};
 					side="West";
 					flags=2;
@@ -44056,7 +44064,7 @@ class Mission
 					};
 					id=790;
 					type="B_UAV_AI";
-					atlOffset=0.54227161;
+					atlOffset=0.54227257;
 				};
 			};
 			class Attributes
@@ -44085,18 +44093,18 @@ class Mission
 				};
 			};
 			id=788;
-			atlOffset=0.54227161;
+			atlOffset=0.23507118;
 		};
 		class Item176
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5345.5439,17.575474,-1888.386};
-				angles[]={0,4.5619063,0};
+				position[]={10615.869,17.203152,4344.9658};
+				angles[]={-0,3.1471953,0};
 			};
 			side="West";
-			flags=2;
+			flags=6;
 			class Attributes
 			{
 				name="ship_turret_5";
@@ -44104,17 +44112,17 @@ class Mission
 			};
 			id=789;
 			type="B_SAM_System_01_F";
-			atlOffset=0.54227161;
+			atlOffset=0.23507118;
 		};
 		class Item177
 		{
 			dataType="Marker";
-			position[]={5422.8169,-0.082999997,-1869.2321};
+			position[]={10608.96,-0.45500001,4424.2759};
 			name="marker_10";
 			text="Severomorsk ";
 			type="o_naval";
 			id=807;
-			atlOffset=41.777;
+			atlOffset=41.404999;
 		};
 		class Item178
 		{
@@ -44737,6 +44745,170 @@ class Mission
 			id=842;
 			type="Land_ClutterCutter_large_F";
 			atlOffset=0.65087128;
+		};
+		class Item195
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10595.905,1.2506076,4322.3701};
+				angles[]={0,4.6367116,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true];}";
+				name="btc_boat_9";
+			};
+			id=844;
+			type="O_SDV_01_F";
+			atlOffset=41.236;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item196
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10596.822,1.2506076,4311.8481};
+				angles[]={0,4.6367116,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true];}";
+				name="btc_boat_10";
+			};
+			id=847;
+			type="O_SDV_01_F";
+			atlOffset=41.236;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item197
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10597.722,1.1886073,4308.4341};
+				angles[]={0,4.6367116,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true];}";
+				name="btc_boat_11";
+			};
+			id=848;
+			type="O_SDV_01_F";
+			atlOffset=41.174;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item198
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10596.364,1.2672113,4319.5566};
+				angles[]={0,4.6367116,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true];}";
+				name="btc_boat_12";
+			};
+			id=851;
+			type="O_SDV_01_F";
+			atlOffset=41.252605;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
