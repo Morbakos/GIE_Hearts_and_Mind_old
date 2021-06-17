@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=852;
+		nextID=853;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10581.37,15.904004,4320.7559};
-		dir[]={0.75083458,-0.66018468,0.020436358};
-		up[]={0.65994358,0.75110281,0.017962631};
-		aside[]={0.02720814,2.7182978e-008,-0.99963677};
+		pos[]={4602.5195,22.342806,526.1637};
+		dir[]={-0.6325013,-0.77369756,0.036923803};
+		up[]={-0.77238649,0.63355356,0.045089658};
+		aside[]={0.058280177,2.424058e-007,0.99831754};
 	};
 };
 binarizationWanted=0;
@@ -34796,7 +34796,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=199;
+		items=200;
 		class Item0
 		{
 			dataType="Marker";
@@ -44909,6 +44909,24 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item199
+		{
+			dataType="Trigger";
+			position[]={4585.7168,6.7399998,532.505};
+			class Attributes
+			{
+				condition="call{(btc_helo_5 in thisList);}";
+				onActivation="call{{_x setdammage 0} Foreach thislist; {_x setfuel 1} Foreach thislist; {_x setVehicleAmmo 1} Foreach thislist;}";
+				sizeA=7;
+				sizeB=7;
+				sizeC=7;
+				repeatable=1;
+				activationBy="EAST";
+				isRectangle=1;
+			};
+			id=852;
+			type="EmptyDetectorArea10x10";
 		};
 	};
 	class Connections
