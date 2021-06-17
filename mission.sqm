@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4602.5195,22.342806,526.1637};
-		dir[]={-0.6325013,-0.77369756,0.036923803};
-		up[]={-0.77238649,0.63355356,0.045089658};
-		aside[]={0.058280177,2.424058e-007,0.99831754};
+		pos[]={4478.7231,58.905731,491.30304};
+		dir[]={-0.31986511,-0.66183478,-0.67799026};
+		up[]={-0.28239495,0.7496475,-0.59856784};
+		aside[]={-0.90440619,1.1385418e-007,0.42668518};
 	};
 };
 binarizationWanted=0;
@@ -35235,6 +35235,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayer=1;
 						class Inventory
 						{
@@ -35324,6 +35325,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35375,6 +35377,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35426,6 +35429,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35477,6 +35481,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35528,6 +35533,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35579,6 +35585,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35630,6 +35637,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35681,6 +35689,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35732,6 +35741,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35783,6 +35793,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35834,6 +35845,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35862,6 +35874,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35890,6 +35903,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35918,6 +35932,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35946,6 +35961,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35974,6 +35990,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36002,6 +36019,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36030,6 +36048,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36058,6 +36077,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36086,6 +36106,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36114,6 +36135,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36142,6 +36164,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36170,6 +36193,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36198,6 +36222,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36226,6 +36251,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36254,7 +36280,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable [""interpreter"",true];}";
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						description="Interprète";
 						isPlayable=1;
 						class Inventory
@@ -36283,7 +36309,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable [""interpreter"",true];}";
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						description="Interprète";
 						isPlayable=1;
 						class Inventory
@@ -36313,7 +36339,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable [""interpreter"",true];}";
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						description="Interprète";
 						isPlayable=1;
 						class Inventory
@@ -36343,7 +36369,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable [""interpreter"",true];}";
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						description="Interprète";
 						isPlayable=1;
 						class Inventory
@@ -36373,6 +36399,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{if ((unitBackpack this isKindof ""tf_mr3000_rhs"")) then {this setVariable [""canUseSSS"",true,true]};}";
 						isPlayable=1;
 						class Inventory
 						{
@@ -36392,6 +36419,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{if (" \n "   (unitBackpack Player isKindof ""tf_mr3000_rhs"")) then {gotpack=true;};}";
 			};
 			id=262;
 			atlOffset=4.2915344e-006;
@@ -41124,8 +41152,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4573.8413,6.7307291,536.31543};
-				angles[]={0,0,0.0079935296};
+				position[]={4573.8408,6.7307267,536.315};
+				angles[]={0,0,0.0079936078};
 			};
 			id=563;
 			type="SSS_module_AddTransport";
@@ -41242,7 +41270,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="true";
+							value="player getVariable [""canUseSSS"",false]";
 						};
 					};
 				};
@@ -44917,7 +44945,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{(btc_helo_5 in thisList);}";
-				onActivation="call{{_x setdammage 0} Foreach thislist; {_x setfuel 1} Foreach thislist; {_x setVehicleAmmo 1} Foreach thislist;}";
+				onActivation="call{{_x setdammage 0;_x setfuel 1;_x setVehicleAmmo 1;} Foreach thislist;}";
 				sizeA=7;
 				sizeB=7;
 				sizeC=7;
