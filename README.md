@@ -5,7 +5,7 @@
 ### Staff administratif
 * Gavin "Morbakos" Sertix: Lead projet
 * Jack Shinzao: Lead dev & lead projet
-* *(par extention)* le staff GIE: Administration
+* *(par extention)* le staff GIE: Administration et modération
 
 ### Contacts projet
 * TBD : responsable formation T90/BTR
