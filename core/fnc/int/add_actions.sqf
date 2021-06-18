@@ -226,5 +226,5 @@ _action = ["custody", "Transmettre la garde des prisonniers", "", {
 }, {true}] call ace_interact_menu_fnc_createAction;
 [btc_mp_officer, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
-_action = ["tpToSquad","Ce redeployer sur ces co-équipier","",{[] call btc_fnc_tpToSquad;}, {time > missionNamespace getVariable ["GIE_tpAvailableAt", 0]}] call ace_interact_menu_fnc_createAction;
+_action = ["tpToSquad","Se redéployer sur ses coéquipiers","",{[] call btc_fnc_tpToSquad;}, {time > missionNamespace getVariable ["GIE_tpAvailableAt", 0]}] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
