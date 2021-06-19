@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10624.378,15.941959,4309.5806};
-		dir[]={-0.48299617,-0.40535483,0.7761457};
-		up[]={-0.21416925,0.91415948,0.34415707};
-		aside[]={0.84902668,-1.4901161e-008,0.52835006};
+		pos[]={10612.687,9.1809187,4338.3525};
+		dir[]={-0.68202543,-0.040559821,0.73020285};
+		up[]={-0.027685612,0.99917716,0.029641289};
+		aside[]={0.73080426,0,0.68258721};
 	};
 };
 binarizationWanted=0;
@@ -36025,24 +36025,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -36057,6 +36039,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -46382,17 +46382,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10607.722,9.2213135,4347.1909};
+				position[]={10607.722,9.2212009,4347.1914};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this, true] call ace_arsenal_fnc_initBox;}";
+				init="call{if (isServer) then { " \n "    [this, 0] call ace_cargo_fnc_setSpace; " \n "};}";
+				name="btc_gear_object_2";
 				disableSimulation=1;
 			};
 			id=854;
 			type="Land_CargoBox_V1_F";
-			atlOffset=0.4417572;
+			atlOffset=0.44164467;
 			class CustomAttributes
 			{
 				class Attribute0
