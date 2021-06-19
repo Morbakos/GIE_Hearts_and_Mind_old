@@ -8,18 +8,18 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=853;
+		nextID=855;
 	};
 	class MarkerIDProvider
 	{
-		nextID=11;
+		nextID=12;
 	};
 	class Camera
 	{
-		pos[]={4490.4575,37.874729,481.67377};
-		dir[]={-0.0013935606,-0.7513665,-0.65988374};
-		up[]={-0.0015867528,0.65988511,-0.75136489};
-		aside[]={-0.99999785,1.1641532e-010,0.0021118228};
+		pos[]={10612.687,9.1809187,4338.3525};
+		dir[]={-0.68202543,-0.040559821,0.73020285};
+		up[]={-0.027685612,0.99917716,0.029641289};
+		aside[]={0.73080426,0,0.68258721};
 	};
 };
 binarizationWanted=0;
@@ -35787,7 +35787,7 @@ class CustomAttributes
 																			"STRING"
 																		};
 																	};
-																	value="Binocular";
+																	value="Laserdesignator_02_ghex_F";
 																};
 															};
 															class Item1
@@ -35841,6 +35841,38 @@ class CustomAttributes
 																		type[]=
 																		{
 																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=2;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"STRING"
+																					};
+																				};
+																				value="Laserbatteries";
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"SCALAR"
+																					};
+																				};
+																				value=1;
+																			};
 																		};
 																	};
 																};
@@ -36463,7 +36495,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=186;
+		items=188;
 		class Item0
 		{
 			dataType="Marker";
@@ -38130,7 +38162,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""arifle_MXC_F"",""FirstAidKit""],[2,2]],[[""SmokeShell"",""SmokeShellBlue"",""30Rnd_65x39_caseless_mag""],[2,2,4]],[[""ToolKit"",""ItemGPS""],[1,1]],[[""B_Parachute""],[2]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -38208,7 +38240,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""arifle_MXC_F"",""FirstAidKit""],[2,2]],[[""SmokeShell"",""SmokeShellBlue"",""30Rnd_65x39_caseless_mag""],[2,2,4]],[[""ToolKit"",""ItemGPS""],[1,1]],[[""B_Parachute""],[2]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -38269,7 +38301,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""arifle_MXC_F"",""FirstAidKit"",""Medikit""],[2,8,1]],[[""SmokeShell"",""SmokeShellBlue"",""30Rnd_65x39_caseless_mag""],[2,2,4]],[[""ToolKit"",""ItemGPS""],[1,1]],[[""B_Parachute""],[8]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -42700,8 +42732,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4584.2539,9.483881,515.47723};
-				angles[]={0,4.7242594,0};
+				position[]={4584.2539,9.4836464,515.47736};
+				angles[]={0,4.724257,0};
 			};
 			side="Empty";
 			class Attributes
@@ -42711,7 +42743,7 @@ class Mission
 			};
 			id=557;
 			type="rhs_ka60_c";
-			atlOffset=0.57423496;
+			atlOffset=0.57400036;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -42913,7 +42945,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4585.9331,6.7414389,533.32751};
+						position[]={4585.9331,6.7414389,533.328};
 						angles[]={0,4.7142563,0};
 					};
 					side="East";
@@ -42930,7 +42962,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4585.9331,6.7414389,533.32751};
+						position[]={4585.9331,6.7414389,533.328};
 						angles[]={0,4.7142563,0};
 					};
 					side="East";
@@ -42984,7 +43016,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4585.9331,8.909646,533.16687};
+				position[]={4585.9331,8.909646,533.16736};
 				angles[]={0,4.7142563,0};
 			};
 			side="East";
@@ -43012,7 +43044,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""FirstAidKit""],[8]],[[""rhs_30Rnd_545x39_7N10_AK"",""rhs_mag_rgd5"",""rhs_mag_nspn_red"",""rhs_mag_rdg2_white""],[6,2,4,4]],[[],[]],[[""B_Parachute""],[8]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[""B_Parachute""],[8]]],false]";
 						};
 					};
 				};
@@ -46334,6 +46366,57 @@ class Mission
 			};
 			id=852;
 			type="EmptyDetectorArea10x10";
+		};
+		class Item186
+		{
+			dataType="Marker";
+			position[]={4404.4741,7.3600001,483.56201};
+			name="marker_11";
+			text="Douche de décontamination";
+			type="o_installation";
+			id=853;
+			atlOffset=0.00010538101;
+		};
+		class Item187
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10607.722,9.2212009,4347.1914};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (isServer) then { " \n "    [this, 0] call ace_cargo_fnc_setSpace; " \n "};}";
+				name="btc_gear_object_2";
+				disableSimulation=1;
+			};
+			id=854;
+			type="Land_CargoBox_V1_F";
+			atlOffset=0.44164467;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
