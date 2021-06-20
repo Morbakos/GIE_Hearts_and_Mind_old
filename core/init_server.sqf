@@ -56,8 +56,6 @@ if (btc_p_side_mission_cycle > 0) then {
     ["btc_tag_remover" + _x, "STR_BTC_HAM_ACTION_REMOVETAG", _x, ["#(rgb,8,8,3)color(0,0,0,0)"], "\a3\Modules_F_Curator\Data\portraitSmoke_ca.paa"] call ace_tagging_fnc_addCustomTag;
 } forEach ["ACE_SpraypaintRed"];
 
-// Custom FOB for ships
-[[4542.72,984.863,1.90181], 40, "Base VMF"] call btc_fnc_fob_create_s;
 
 private _ship_weapons = [ship_turret_1, ship_turret_2, ship_turret_3, ship_turret_4, ship_turret_5];
 {
