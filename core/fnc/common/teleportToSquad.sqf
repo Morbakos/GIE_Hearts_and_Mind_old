@@ -9,7 +9,9 @@
 		private _pos = [_posPlayer, 250, 500, 3, 0, 20, 0] call BIS_fnc_findSafePos;
 		hint "TP en cours.";
 		player setPos (_pos);
+		_azimuth = player getDir _posPlayer;
 		openMap false;
+		hint format ["Vos alliés son azimut %1", round _azimuth, "%1"];
 	}];
 
 	while{visibleMap} do {
