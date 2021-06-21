@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=859;
+		nextID=860;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4457.3242,12.309449,467.12936};
-		dir[]={-0.34795815,-0.58567101,-0.73206621};
-		up[]={-0.25142083,0.81054777,-0.52896196};
-		aside[]={-0.90317219,-2.5134068e-007,0.42928782};
+		pos[]={4498.0225,21.061438,528.72186};
+		dir[]={-0.44814557,-0.58081299,0.67958468};
+		up[]={-0.31974834,0.81403464,0.48487857};
+		aside[]={0.83482867,2.6030466e-007,0.55051905};
 	};
 };
 binarizationWanted=0;
@@ -36603,7 +36603,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=187;
+		items=188;
 		class Item0
 		{
 			dataType="Marker";
@@ -36740,7 +36740,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4490.7021,6.7399998,540.81024};
+				position[]={4491.186,6.7399998,540.04999};
 				angles[]={0,0.94083714,0};
 			};
 			name="btc_curator";
@@ -46602,6 +46602,118 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item187
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4489.6123,6.7399998,539.78851};
+				angles[]={-0,0.94083714,0};
+			};
+			name="btc_curator_2";
+			init="call{this addEventHandler ['CuratorObjectPlaced',{_this call btc_fnc_eh_CuratorObjectPlaced}];}";
+			id=859;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="76561198083886996";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
 			};
 		};
 	};
