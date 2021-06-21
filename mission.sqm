@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=860;
+		nextID=861;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4498.0225,21.061438,528.72186};
-		dir[]={-0.44814557,-0.58081299,0.67958468};
-		up[]={-0.31974834,0.81403464,0.48487857};
-		aside[]={0.83482867,2.6030466e-007,0.55051905};
+		pos[]={4491.9795,15.193672,537.61938};
+		dir[]={-0.26114452,-0.89742631,0.35560438};
+		up[]={-0.53118986,0.44116968,0.72332865};
+		aside[]={0.80601263,-1.4097895e-007,0.59191197};
 	};
 };
 binarizationWanted=0;
@@ -36133,6 +36133,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -36147,24 +36165,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -36603,7 +36603,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=188;
+		items=189;
 		class Item0
 		{
 			dataType="Marker";
@@ -46610,7 +46610,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4489.6123,6.7399998,539.78851};
-				angles[]={-0,0.94083714,0};
+				angles[]={0,0.94083714,0};
 			};
 			name="btc_curator_2";
 			init="call{this addEventHandler ['CuratorObjectPlaced',{_this call btc_fnc_eh_CuratorObjectPlaced}];}";
@@ -46634,6 +46634,118 @@ class Mission
 								};
 							};
 							value="76561198083886996";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item188
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4490.356,6.7399998,541.31097};
+				angles[]={0,0.94083714,0};
+			};
+			name="btc_curator_3";
+			init="call{this addEventHandler ['CuratorObjectPlaced',{_this call btc_fnc_eh_CuratorObjectPlaced}];}";
+			id=860;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="76561198058210193";
 						};
 					};
 				};
