@@ -10,9 +10,8 @@
 		hint "TP en cours.";
 		player setPos (_pos);
 		_azimuth = player getDir _posPlayer;
-		_roundedAzimuth = [_azimuth, 0] call BIS_fnc_cutDecimals;
 		openMap false;
-		hint format ["Vos alliés son azimut %1", (_roundedAzimuth), "%1"];
+		hint format ["Vos alliés son azimut %1", round _azimuth, "%1"];
 	}];
 
 	while{visibleMap} do {
