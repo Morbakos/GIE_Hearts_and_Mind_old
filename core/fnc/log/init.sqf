@@ -27,6 +27,7 @@ params [
 if (btc_log_obj_created pushBackUnique _obj isEqualTo -1) exitWith {};
 btc_curator addCuratorEditableObjects [[_obj], false];
 btc_curator_2 addCuratorEditableObjects [[_obj], false];
+btc_curator_3 addCuratorEditableObjects [[_obj], false];
 
 if (
     _obj isKindOf "DeconShower_01_F" ||
