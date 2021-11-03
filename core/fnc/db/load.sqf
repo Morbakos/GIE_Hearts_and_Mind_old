@@ -225,3 +225,6 @@ private _markers_properties = +(profileNamespace getVariable [format ["btc_hm_%1
         _marker setMarkerPolyline _markerPolyline;
     };
 } forEach _markers_properties;
+
+// Command
+btc_playersRanks = +(profileNamespace getVariable [format ["btc_hm_%1_command", _name], []]);

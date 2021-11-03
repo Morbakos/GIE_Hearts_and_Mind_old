@@ -364,6 +364,11 @@ if (!isDedicated) then {
     btc_fnc_tow_unhook = compile preprocessFileLineNumbers "core\fnc\tow\unhook.sqf";
     btc_fnc_tow_unwind = compile preprocessFileLineNumbers "core\fnc\tow\unwind.sqf";
     btc_fnc_tow_check = compile preprocessFileLineNumbers "core\fnc\tow\check.sqf";
+
+    //COMMAND
+    btc_fnc_command_changeRank = compile preprocessFileLineNumbers "core\fnc\command\changeRank.sqf";
+    btc_fnc_command_rankId = compile preprocessFileLineNumbers "core\fnc\command\rankId.sqf";
+    btc_fnc_command_setPowerUsers = compile preprocessFileLineNumbers "core\fnc\command\setPowerUsers.sqf";
 };
 
 /////////////////////HEADLESS\\\\\\\\\\\\\\\\\\\\\

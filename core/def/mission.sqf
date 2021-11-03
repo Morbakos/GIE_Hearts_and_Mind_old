@@ -352,6 +352,7 @@ if (isServer) then {
     btc_type_blacklist = btc_type_tags + ["UserTexture1m_F"]; publicVariable "btc_type_blacklist";
 
     btc_groundWeaponHolder = [];
+    btc_playersRanks = []; // format [playerUID, rank]
 };
 
 //Civ

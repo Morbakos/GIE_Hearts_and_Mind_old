@@ -40,6 +40,9 @@ profileNamespace setVariable [format ["btc_hm_%1_tags", _name], nil];
 profileNamespace setVariable [format ["btc_hm_%1_markers", _name], nil];
 profileNamespace setVariable [format ["btc_hm_%1_db", _name], nil];
 
+[] call btc_fnc_command_setPowerUsers;
+profileNamespace setVariable [format ["btc_hm_%1_command", _name], btc_playersRanks];
+
 saveProfileNamespace;
 
 if (_showHint) then {

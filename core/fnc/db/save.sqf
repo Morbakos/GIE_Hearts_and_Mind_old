@@ -217,6 +217,9 @@ private _markers_properties = _player_markers apply {
 };
 profileNamespace setVariable [format ["btc_hm_%1_markers", _name], +_markers_properties];
 
+// Command
+profileNamespace setVariable [format ["btc_hm_%1_command", _name], +btc_playersRanks];
+
 //End
 profileNamespace setVariable [format ["btc_hm_%1_db", _name], true];
 saveProfileNamespace;

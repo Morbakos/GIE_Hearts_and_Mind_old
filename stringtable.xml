@@ -2461,5 +2461,15 @@
                 <French>Impossible de supprimer un objet non créé par le Point Logistique</French>
             </Key>
         </Container>
+        <Container name="Command">
+            <Key ID="STR_BTC_CANT_PROMOTE">
+                <Original>%1 can't promote you to higher rank</Original>
+                <French>%1 ne peut pas te promouvoir</French>
+            </Key>
+            <Key ID="STR_BTC_CANT_PROMOTE_SELF">
+                <Original>You're not allowed to promote %1</Original>
+                <French>Tu n'es pas autorisé à promouvoir %1</French>
+            </Key>
+        </Container>
     </Package>
 </Project>
