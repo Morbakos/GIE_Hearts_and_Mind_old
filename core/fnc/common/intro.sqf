@@ -44,6 +44,6 @@ if (!isNil "btc_helo_1") then {
     _array pushBack ['\A3\ui_f\data\map\vehicleicons\iconhelicopter_ca.paa', [0.7, 0, 0,1], getPos btc_helo_1, 1.1, 1.1, 0, localize "STR_BTC_HAM_INTRO_ONLYRESPAWN", 1]; //Only Respawnable
 };
 
-[getMarkerPos "btc_base", localize "STR_BTC_HAM_INTRO_LOADINGTXT", 20, 30, 240, 0, _array, 0] call BIS_fnc_establishingShot;
+[getPos btc_gear_object, localize "STR_BTC_HAM_INTRO_LOADINGTXT", 20, 30, 240, 0, _array, 0] call BIS_fnc_establishingShot;
 
 enableSaving [false, false];

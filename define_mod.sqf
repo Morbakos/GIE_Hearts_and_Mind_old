@@ -28,16 +28,11 @@ btc_custom_loc = [
             "G_Shades_Green"
         ];
 */
-private _weapons = ["rhs_weap_ak74m", "rhs_weap_pkp", "rhs_weap_svdp", "rhs_weap_rpg7", "rhs_weap_ak74m_gp25", "rhs_weap_pp2000", "rhs_pdu4", "Binocular"];
-private _magazines = ["rhs_30Rnd_545x39_7N10_AK", "ACE_Chemlight_IR", "rhs_mag_rgo", "rhs_mag_rdg2_white", "rhs_100Rnd_762x54mmR", "rhs_10Rnd_762x54mmR_7N1", "rhs_VOG25", "rhs_GRD40_Red", "rhs_18rnd_9x21mm_7N28"];
-private _items = [
-    "rhs_uniform_emr_patchless", "ACE_splint", "ACE_epinephrine", "ACE_morphine", "ACE_IR_Strobe_Item", 
-    "ACE_packingBandage", "ACE_elasticBandage", "ACE_EarPlugs", "ACE_Flashlight_MX991", "ACE_tourniquet", "ACE_MapTools", "ACE_microDAGR", "ACE_CableTie",
-    "rhs_6b23_6sh116", "rhs_6b23_digi_6sh92_Spetsnaz", "rhs_6b47_bala", "ItemMap", "tf_microdagr", "TFAR_anprc152", "rhs_1PN138", "ItemCompass", "ACE_Altimeter",
-    "rhs_6b23_digi_sniper", "rhs_6b23_digi_6sh92_spetsnaz2", "rhs_6b23_digi_6sh92_Vog_Spetsnaz", "rhs_6b23_digi_engineer", "rhs_tsh4_ess_bala", "rhs_uniform_df15_tan",
-    "rhs_6sh92_digi", "rhs_zsh7a_mike_alt"
-];
-private _backpacks = ["tf_rt1523g_bwmod", "rhs_assault_umbts", "rhs_rpg_empty"];
+private _weapons = [];
+private _magazines = [];
+private _items = [];
+private _backpacks = [];
+
 btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks];
 
 /*

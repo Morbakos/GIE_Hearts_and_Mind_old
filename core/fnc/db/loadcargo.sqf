@@ -46,8 +46,11 @@ Author:
             btc_chem_contaminated pushBack _l;
             publicVariable "btc_chem_contaminated";
         };
+        if (unitIsUAV _l) then {
+            createVehicleCrew _l;
+        };
     } forEach _cargo;
 
     //set inventory content for weapons, magazines and items
     [_obj, _inventory] call btc_fnc_log_setCargo;
-}, _this, 0.1] call CBA_fnc_waitAndExecute;
+}, _this] call CBA_fnc_execNextFrame;

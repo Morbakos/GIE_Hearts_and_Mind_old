@@ -55,10 +55,3 @@ if (btc_p_side_mission_cycle > 0) then {
 {
     ["btc_tag_remover" + _x, "STR_BTC_HAM_ACTION_REMOVETAG", _x, ["#(rgb,8,8,3)color(0,0,0,0)"], "\a3\Modules_F_Curator\Data\portraitSmoke_ca.paa"] call ace_tagging_fnc_addCustomTag;
 } forEach ["ACE_SpraypaintRed"];
-
-
-private _ship_weapons = [ship_turret_1, ship_turret_2, ship_turret_3, ship_turret_4, ship_turret_5];
-{
-    private _group = createGroup [btc_player_side, true];
-    [_x] join _group;
-} forEach _ship_weapons;

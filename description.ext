@@ -49,6 +49,18 @@ class Extended_InitPost_EventHandlers {
     };
 };
 
+// Patch
+class CfgUnitInsignia
+{
+	class MorphoBleu
+	{
+		displayName = "Opération Morpho Bleu";	// Name displayed in Arsenal
+		author = "[G.I.E] J.Shinzao";				// Author displayed in Arsenal
+		texture = "core\img\GIE_morpho_bleu.paa"; // Image path
+		textureVehicle = "";						// Currently does nothing, reserved for future use
+	};
+};
+
 respawn = "BASE";
 respawnDelay = 2;
 respawnDialog = 0;
@@ -58,6 +70,3 @@ respawnTemplates[] = {"MenuPosition"};
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
-
-
-#include "loadout.hpp"

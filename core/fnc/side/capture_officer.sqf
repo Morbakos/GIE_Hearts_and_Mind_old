@@ -105,8 +105,6 @@ for "_i" from 1 to _convoyLength do {
 
     private _vehs = (units _group) apply {assignedVehicle _x};
     btc_curator addCuratorEditableObjects [_vehs arrayIntersect _vehs, false];
-    btc_curator_2 addCuratorEditableObjects [_vehs arrayIntersect _vehs, false];
-    btc_curator_3 addCuratorEditableObjects [_vehs arrayIntersect _vehs, false];
 }, [
     _group, _pos2, -1, "MOVE", "SAFE", "RED", "LIMITED", "COLUMN",
     format ["['%1', 'FAILED'] call BIS_fnc_taskSetState;", _taskID], [0, 0, 0], _radius/2
@@ -119,8 +117,6 @@ for "_i" from 1 to _convoyLength do {
     removeAllWeapons _captive;
     private _vehs = (units _group) apply {assignedVehicle _x};
     btc_curator addCuratorEditableObjects [_vehs arrayIntersect _vehs, false];
-    btc_curator_2 addCuratorEditableObjects [_vehs arrayIntersect _vehs, false];
-    btc_curator_3 addCuratorEditableObjects [_vehs arrayIntersect _vehs, false];
 
     private _surrender_taskID = _taskID + "su";
     [[_surrender_taskID, _taskID], 24, objNull, typeOf _captive] call btc_fnc_task_create;
@@ -154,7 +150,8 @@ for "_i" from 1 to _convoyLength do {
         isNull (_this select 0)
     }, {
         [_this select 1, "FAILED"] call btc_fnc_task_setState;
-    }, [_captive, _taskID]] call CBA_fnc_waitUntilAndExecute;
+        deleteVehicle (_this select 2);
+    }, [_captive, _taskID, _trigger]] call CBA_fnc_waitUntilAndExecute;
 
     [{
         (_this select 0) inArea [getPosWorld btc_create_object_point, 100, 100, 0, false] ||

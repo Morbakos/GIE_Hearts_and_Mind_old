@@ -1,5 +1,5 @@
 
-btc_version = [1, 21, 1];
+btc_version = [1, 21, 9];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 
 //Param
@@ -121,9 +121,7 @@ if (isServer) then {
 
     //City
     btc_city_radius = _p_city_radius;
-    btc_city_blacklist = [
-        "Olsha"
-    ];//NAME FROM CFG
+    btc_city_blacklist = [];//NAME FROM CFG
 
     //Civ
     btc_civ_veh_active = [];
@@ -133,7 +131,7 @@ if (isServer) then {
     btc_db_serverCommandPassword = "btc_password"; //Define the same password in server.cfg like this: serverCommandPassword = "btc_password";
 
     //Hideout
-    btc_hideouts = [];
+    btc_hideouts = []; publicVariable "btc_hideouts";
     btc_hideouts_id = 0;
     btc_hideouts_radius = 800;
     btc_hideout_n = _hideout_n;
@@ -192,7 +190,7 @@ if (isServer) then {
         {!(getArray (_x >> 'magazines') isEqualTo [])} &&
         {getNumber (_x >> 'scope') isEqualTo 2}
     };
-    btc_cache_weapons_type = _weapons_usefull apply {configName _x};
+    btc_cache_weapons_type = _weapons_usefull apply {(toLower getText (_x >> "model")) select [1]};
 
     //Hideout classname
     btc_type_campfire = ["MetalBarrel_burning_F"] + (_allClassSorted select {_x isKindOf "Land_Campfire_F"});
@@ -212,7 +210,7 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "civtreatment", "checkpoint", "convoy", "rescue", "capture_officer", "hostage", "hack", "kill", "EMP"]; // On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
+    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "civtreatment", "checkpoint", "convoy", "rescue", "capture_officer", "hostage", "hack", "kill", "EMP", "removeRubbish"]; // On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
     if (btc_p_sea) then {btc_side_list append ["civtreatment_boat", "underwater_generator"]}; // On sea
     if (btc_p_chem) then {btc_side_list pushBack "chemicalLeak"};
     btc_side_list_use = [];
@@ -284,8 +282,8 @@ if (isServer) then {
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
     //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_helo_1, btc_helo_2, btc_helo_3, btc_boat_1, btc_boat_2, btc_boat_3, btc_boat_4, btc_boat_5, btc_boat_6, btc_boat_7, btc_boat_8, btc_boat_9, btc_boat_10, btc_boat_11, btc_boat_12, btc_tank_1, btc_tank_2, btc_tank_3, btc_tank_4];
-    btc_helos = [btc_helo_4];
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25];
+    btc_helo = [btc_helo_1];
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
@@ -357,7 +355,7 @@ if (isServer) then {
 //Civ
 // Get all faction from mod there are currently running
 //copyToClipboard str (["CIV"] call btc_fnc_get_class);
-private _allfaction = ["AFGCIV","CIV_F","DEFAULT","CFP_C_AFG","CFP_C_AFRCHRISTIAN","CFP_C_AFRISLAMIC","CFP_C_ASIA","CFP_C_CHERNO_WIN","CFP_C_MALDEN","CFP_C_ME","CUP_C_RU","CUP_C_CHERNARUS","CUP_C_SAHRANI","CUP_C_TK","GM_FC_GC_CIV","GM_FC_GE_CIV","LIB_CIV","LOP_AFR_CIV","LOP_CHR_CIV","LOP_TAK_CIV","CIV_IDAP_F","OPTRE_UEG_CIV","RDS_RUS_CIV","UK3CB_ADC_C","UK3CB_CHC_C","UK3CB_TKC_C","UNSUNG_C"]; //All factions
+private _allfaction = ["CIV_F","DEFAULT","CFP_C_AFG","CFP_C_AFRCHRISTIAN","CFP_C_AFRISLAMIC","CFP_C_ASIA","CFP_C_CHERNO_WIN","CFP_C_MALDEN","CFP_C_ME","CIV_IDAP_F","CSLA_CIV","CUP_C_RU","CUP_C_CHERNARUS","CUP_C_SAHRANI","CUP_C_TK","CWR3_FACTION_CIV","GM_FC_GC_CIV","GM_FC_GE_CIV","LIB_CIV","OPTRE_UEG_CIV","RDS_POL_CIV","RDS_RUS_CIV","C_VIET","UK3CB_ADC_C","UK3CB_CHC_C","UK3CB_TKC_C","UNSUNG_C"]; //All factions
 _p_civ = _allfaction select _p_civ; //Select faction selected from mission parameter
 _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from mission parameter
 private _allclasse = [[_p_civ]] call btc_fnc_civ_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_fnc_civ_class.
@@ -380,7 +378,7 @@ btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_R
 //FOB
 btc_fob_mat = "Land_Cargo20_blue_F";
 btc_fob_structure = "Land_Cargo_HQ_V1_F";
-btc_fob_flag = "rhs_Flag_Russia_F";
+btc_fob_flag = "R3F_DRAPEAU_FR_MIL";
 btc_fob_id = 0;
 btc_fob_minDistance = 1500;
 
@@ -420,8 +418,8 @@ btc_containers_mat = ["Land_Cargo20_military_green_F", "Land_Cargo40_military_gr
 
 if (isServer) then {
     //Player
-    missionNamespace setVariable ["btc_player_side", east, true];
-    missionNamespace setVariable ["btc_respawn_marker", "respawn_east", true];
+    missionNamespace setVariable ["btc_player_side", independent, true];
+    missionNamespace setVariable ["btc_respawn_marker", "respawn_guerrila", true];
 
     //Log
     private _rearming_static =
@@ -438,7 +436,7 @@ if (isServer) then {
     });
     ([_rearming_static] call btc_fnc_find_veh_with_turret) params ["_rearming_static", "_magazines_static"];
 
-    ([btc_vehicles + btc_helos] call btc_fnc_log_getRearmMagazines) params ["_rearming_vehicles", "_rearming_magazines"];
+    ([btc_vehicles + btc_helo] call btc_fnc_log_getRearmMagazines) params ["_rearming_vehicles", "_rearming_magazines"];
 
     btc_construction_array =
     [
@@ -633,7 +631,7 @@ btc_lift_HUD_y  = 0.848;
 btc_hq = objNull;
 // Get all faction from mod there are currently running
 //copyToClipboard str (["EN"] call btc_fnc_get_class);
-private _allfaction = ["BLU_F","BLU_G_F","IND_C_F","IND_E_F","IND_F","IND_G_F","IND_L_F","OPF_F","OPF_G_F","OPF_R_F","BLU_CTRG_F","BLU_GEN_F","BLU_T_F","OPF_GEN_F","OPF_T_F","BLU_W_F","RHS_FACTION_VMF","RHS_FACTION_MSV","RHS_FACTION_RVA","RHS_FACTION_TV","RHS_FACTION_VDV","RHS_FACTION_VPVO","RHS_FACTION_VV","RHS_FACTION_VVS","RHS_FACTION_VVS_C","RHSGREF_FACTION_CDF_AIR","RHSGREF_FACTION_CDF_AIR_B","RHSGREF_FACTION_CDF_GROUND","RHSGREF_FACTION_CDF_GROUND_B","RHSGREF_FACTION_CDF_NG","RHSGREF_FACTION_CDF_NG_B","RHSSAF_FACTION_AIRFORCE","RHSSAF_FACTION_AIRFORCE_OPFOR","RHSSAF_FACTION_ARMY","RHSSAF_FACTION_ARMY_OPFOR","RHSSAF_FACTION_UN","RHS_FACTION_SOCOM","RHS_FACTION_USAF","RHS_FACTION_USARMY_D","RHS_FACTION_USARMY_WD","RHS_FACTION_USMC_D","RHS_FACTION_USMC_WD","RHS_FACTION_USN","RHSGREF_FACTION_CHDKZ","RHSGREF_FACTION_CHDKZ_G","RHSGREF_FACTION_HIDF","RHSGREF_FACTION_NATIONALIST","RHSGREF_FACTION_TLA","RHSGREF_FACTION_TLA_G","RHSGREF_FACTION_UN"]; //All factions
+private _allfaction = ["IND_F","OPF_F","OPF_G_F","IND_G_F","BLU_G_F","IND_E_F","BLU_F","IND_L_F","IND_C_F","OPF_R_F","OPF_T_F","BLU_CTRG_F","OPF_GEN_F","BLU_GEN_F","BLU_T_F","FRANCE_FACTION","B_FR","BLU_W_F","R3F_BLUFOR","R3F_OPFOR","R3F_MIS_OPFOR","R3F_MIS","R3F_MIS_BLUFOR","","RHS_FACTION_VMF","RHS_FACTION_MSV","RHS_FACTION_RVA","RHS_FACTION_TV","RHS_FACTION_VDV","RHS_FACTION_VPVO","RHS_FACTION_VV","RHS_FACTION_VVS_C","RHS_FACTION_VVS","RHSGREF_FACTION_CDF_AIR_B","RHSGREF_FACTION_CDF_GROUND","RHSGREF_FACTION_CDF_GROUND_B","RHSGREF_FACTION_CDF_NG","RHSGREF_FACTION_CDF_NG_B","RHSGREF_FACTION_CDF_AIR","RHSSAF_FACTION_ARMY","RHSSAF_FACTION_UN","RHSSAF_FACTION_ARMY_OPFOR","RHSSAF_FACTION_AIRFORCE_OPFOR","RHSSAF_FACTION_AIRFORCE","RHS_FACTION_USARMY_D","RHS_FACTION_USARMY_WD","RHS_FACTION_USN","RHS_FACTION_SOCOM","RHS_FACTION_USAF","RHS_FACTION_USMC_D","RHS_FACTION_USMC_WD","RHSGREF_FACTION_HIDF","RHSGREF_FACTION_UN","RHSGREF_FACTION_CHDKZ","RHSGREF_FACTION_CHDKZ_G","RHSGREF_FACTION_NATIONALIST","RHSGREF_FACTION_TLA","RHSGREF_FACTION_TLA_G","R3F"]; //All factions
 _p_en = _allfaction select _p_en; //Select faction selected from mission parameter
 _allclasse = [[_p_en], _p_en_AA, _p_en_tank] call btc_fnc_mil_class; //Create classes from factions, you can combine factions like that: [[_p_en , "IND_F"], _p_en_AA, _p_en_tank] call btc_fnc_mil_class;
 
@@ -705,3 +703,6 @@ btc_AI_skill = _p_skill;
 btc_units_owners = [];
 
 btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, independent] find btc_player_side);
+
+// Arsenal
+[] call compile preprocessFileLineNumbers "core\def\loadouts.sqf";

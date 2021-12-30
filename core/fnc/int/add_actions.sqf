@@ -84,7 +84,7 @@ _action = ["Interrogate_intel", localize "STR_BTC_HAM_ACTION_INTEL_INTERROGATE",
 //Logistic
 _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
 {[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} forEach btc_log_def_loadable;
-_action = ["Place", localize "STR_ACE_Dragging_Carry", "\z\ace\addons\dragging\UI\icons\box_carry.paa", {_target call btc_fnc_log_place}, {!btc_log_placing}] call ace_interact_menu_fnc_createAction;
+_action = ["Place", localize "STR_ACE_Dragging_Carry", "\z\ace\addons\dragging\UI\icons\box_carry.paa", {_target call btc_fnc_log_place}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}] call ace_interact_menu_fnc_createAction;
 {[_x, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;} forEach btc_log_def_placeable;
 
 //Shower
@@ -98,7 +98,7 @@ _action = ["Shower_act", getText(configfile >> "CfgVehicles" >> "DeconShower_02_
 } forEach ["DeconShower_01_F", "DeconShower_02_F"];
 
 //FOB
-_action = ["Mount_FOB", localize "STR_BTC_HAM_ACTION_FOB_MOUNT", "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {_target spawn btc_fnc_fob_create}, {!btc_log_placing}] call ace_interact_menu_fnc_createAction;
+_action = ["Mount_FOB", localize "STR_BTC_HAM_ACTION_FOB_MOUNT", "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {_target spawn btc_fnc_fob_create}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}] call ace_interact_menu_fnc_createAction;
 [btc_fob_mat, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 _action = ["Dismantle_FOB", localize "STR_BTC_HAM_ACTION_FOB_DISMANTLE", "", {_target remoteExecCall ["btc_fnc_fob_dismantle_s", 2]}, {true}, {}, [], [0, 0, -2], 5] call ace_interact_menu_fnc_createAction;
 [btc_fob_flag, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
@@ -137,11 +137,11 @@ _action = ["Civil_Go_away", localize "STR_BTC_HAM_ACTION_ORDERS_GOAWAY", "\A3\ui
 } forEach btc_civ_type_units;
 
 //Side missions
-_action = ["side_mission", localize "STR_BTC_HAM_DOC_SIDEMISSION_TITLE", "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
+_action = ["side_mission", localize "STR_BTC_HAM_DOC_SIDEMISSION_TITLE", "\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa", {}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
-_action = ["side_mission_abort", localize "STR_BTC_HAM_ACTION_SIDEMISSION_ABORT", "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa", {[player call BIS_fnc_taskCurrent] call btc_fnc_task_abort}, {true}] call ace_interact_menu_fnc_createAction;
+_action = ["side_mission_abort", localize "STR_BTC_HAM_ACTION_SIDEMISSION_ABORT", "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa", {[player call BIS_fnc_taskCurrent] call btc_fnc_task_abort}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject;
-_action = ["side_mission_request", localize "STR_BTC_HAM_ACTION_SIDEMISSION_REQ", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {[] remoteExec ["btc_fnc_side_create", 2]}, {true}] call ace_interact_menu_fnc_createAction;
+_action = ["side_mission_request", localize "STR_BTC_HAM_ACTION_SIDEMISSION_REQ", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {[] remoteExec ["btc_fnc_side_create", 2]}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 //Debug
@@ -160,12 +160,12 @@ _actions pushBack ["redeploy", localize "STR_BTC_HAM_ACTION_BIRESPAWN", "\A3\ui_
         player hideObject true;
         forceRespawn player;
     };
-}, {!btc_log_placing}];
+}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}];
 _actions pushBack ["base", localize "STR_BTC_HAM_ACTION_REDEPLOYBASE", getText (configfile >> "CfgMarkers" >> getMarkerType "btc_base" >> "icon"), {
     if ([] call btc_fnc_fob_redeployCheck) then {[_player, btc_respawn_marker, false] call BIS_fnc_moveToRespawnPosition};
-}, {!btc_log_placing}, {_this call btc_fnc_fob_redeploy}, "Base"];
-_actions pushBack ["rallypoints", localize "STR_BTC_HAM_ACTION_REDEPLOYRALLY", "\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa", {}, {!btc_log_placing}, {_this call btc_fnc_fob_redeploy}, ""];
-_actions pushBack ["FOB", localize "STR_BTC_HAM_ACTION_REDEPLOYFOB", "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {}, {!btc_log_placing}];
+}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}, {_this call btc_fnc_fob_redeploy}, "Base"];
+_actions pushBack ["rallypoints", localize "STR_BTC_HAM_ACTION_REDEPLOYRALLY", "\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa", {}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}, {_this call btc_fnc_fob_redeploy}, ""];
+_actions pushBack ["FOB", localize "STR_BTC_HAM_ACTION_REDEPLOYFOB", "\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa", {}, {!btc_log_placing && !(player getVariable ["ace_dragging_isCarrying", false])}];
 {
     private _action = _x call ace_interact_menu_fnc_createAction;
     [btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
@@ -197,26 +197,12 @@ if (btc_p_arsenal_Type > 0) then {
 };
 if !(btc_p_arsenal_Restrict isEqualTo 0) then {[btc_gear_object, btc_p_arsenal_Type, btc_p_arsenal_Restrict, btc_custom_arsenal] call btc_fnc_arsenal_data;};
 
-//Arsenal Severomorsk
-//BIS
-if (btc_p_arsenal_Type < 3) then {
-    btc_gear_object_2 addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_BIS", "['Open', [!(btc_p_arsenal_Restrict isEqualTo 1), _this select 0]] call bis_fnc_arsenal;"];
-};
-//ACE
-if (btc_p_arsenal_Type > 0) then {
-    [btc_gear_object_2, !(btc_p_arsenal_Restrict isEqualTo 1), false] call ace_arsenal_fnc_initBox;
-    if (btc_p_arsenal_Type in [2, 4]) then {
-        btc_gear_object_2 addAction [localize "STR_BTC_HAM_ACTION_ARSENAL_OPEN_ACE", "[btc_gear_object_2, player] call ace_arsenal_fnc_openBox;"];
-    };
-};
-if !(btc_p_arsenal_Restrict isEqualTo 0) then {[btc_gear_object_2, btc_p_arsenal_Type, btc_p_arsenal_Restrict, btc_custom_arsenal] call btc_fnc_arsenal_data;};
-
 // Medical tent
 _action = ["full_heal", "Se soigner", "", {
     [objNull, player] call ace_medical_treatment_fnc_fullHeal; 
     hint "Vous avez été soigné par les médecins de la base";
 }, {true}] call ace_interact_menu_fnc_createAction;
-[btc_medical_tent, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+[btc_medical, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 _action = ["full_heal_area", "Soigner les unités aux alentours", "", {
     private _soldiers = (btc_medical_tent nearEntities 15) select {isPlayer _x};
