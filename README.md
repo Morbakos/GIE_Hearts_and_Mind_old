@@ -3,56 +3,73 @@
 ## Staff et personnes importantes du projet
 
 ### Staff administratif
-* Gavin "Morbakos" Sertix: Lead projet
-* Jack Shinzao: Lead dev & lead projet
-* *(par extention)* le staff GIE: Administration et modération
+* Gavin "Morbakos" Sertix: CTO
+* Jack Shinzao: Lead dev
+* Chocox: Responsable communication
+* Tisma: Responsable réalisme & mapping
 
 ### Contacts projet
-* TBD : responsable formation T90/BTR
-* TBD : responsable formation équipage hélico
-* TBD : responsable groupe Spetsnaz
+* Responsable blindé: Tisma
+* Responsable génie: Chocox
+* Responsable ALAT: Jack Shinzao
+* Responsable forces spéciales: Morbakos
 
-
-## Information sur la version actuelle
+## Informations sur la version actuelle
 
 **Carte:** Fapovo
 
-**Faction:** Régiment de VDV (parachutistes russes) renforcé avec des unités des TV (unités blindées)
+**Faction:** Armée de Terre (France)
 
-**Spécialités:**
-* Infanterie (Disponible sans formation) :
-  - AA
+**Composantes:**
+
+* Commandement:
+  - Membres de l'État-Major
+
+* Infanterie :
+  - Chef de section*
+  - Chef de groupe*
+  - Chef d'équipe* 300 et 600
+  - Opérateur radio
+  - Fusiler AT4
+  - Médecin
   - EOD
-  - FU
-  - GL
-  - HAT
-  - LMG (PKP et RPK)
-  - JTAC°
-  - LAT
-  - MEDIC
-  - TE
-  - TP
-  - SL/TL°
+  - Génie (déminage et minage)
+  - Fantassin
+  - Mitrailleur
+  - Tireur ERYX
+  - Assistant ERYX
+  - Grenadier 300 et 600
+  - JTAC
 
-* Infantrie (Disponible après formation) :
-  - Plongeur
-  - Spetnaz (FS)
+* Blindés :
+  - Chef de char
+  - Tireur
+  - Pilote
 
-* Équipage de char/véhicule blindé (Disponible après formation) :
-  - T-90
-  - BTR-80
+* ALAT :
+  - NH-90 Cargo
+  - NH-90 Transport
+  - EC665 Tigre
 
-* Équipage d'hélicoptère (Disponible après formation) :
-  - Ka-60
-  - Mi-24P
-  - Mi-24V
-  - Mi-8T
+* Forces Spéciales:
+  - Chef de groupe
+  - Médecin
+  - Mitrailleur
+  - Tireur de précision
+  - JTAC
+  - Breacher
+  - Opérateur NRBC
+  - Plongeur 
+  - Plongeur démolisseur
+  - Plongeur médecin
+  - Tireur d'élite
+  - Spotter
 
- *(° sous réserve d'être un joueur reconnu par le GIE)*
+ *(° sous réserve de remplir les critère d'éligibilité au rôle, cf [Les montées en grade](tbd))*
 
-**Version:** `1.0.0`
+**Version:** `3.0.0`
 
-## Comment installer la mission pour le dev:
-* Créer un dossier `GIE_hearts_and_mind_v2.fapovo` dans `Document/ArmA3 Other Profiles/MPMissions`
+## Comment installer la mission pour aider au développement:
+* Créer un dossier `GIE_hearts_and_mind_v3.Fapovo` dans `Document/ArmA3 Other Profiles/MPMissions`
 * Cloner le repo dans ce dossier
 * Enjoy !

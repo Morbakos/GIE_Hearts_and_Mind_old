@@ -55,3 +55,7 @@ if (btc_p_side_mission_cycle > 0) then {
 {
     ["btc_tag_remover" + _x, "STR_BTC_HAM_ACTION_REMOVETAG", _x, ["#(rgb,8,8,3)color(0,0,0,0)"], "\a3\Modules_F_Curator\Data\portraitSmoke_ca.paa"] call ace_tagging_fnc_addCustomTag;
 } forEach ["ACE_SpraypaintRed"];
+
+if ((profileNamespace getVariable [format ["btc_hm_%1_fobs", worldName], []] findIf {_x select 0 == "Camp FS"}) isEqualTo -1) then {
+    [[4570.91,945.693,0], 0, "Camp FS"] call btc_fnc_fob_create_s;
+};
