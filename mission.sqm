@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4582.8862,28.156115,959.26868};
-		dir[]={-0.6077581,-0.61166102,0.50646788};
-		up[]={-0.46989286,0.79111427,0.39158013};
-		aside[]={0.64018989,1.6624108e-007,0.76822305};
+		pos[]={4457.9141,12.145245,462.68051};
+		dir[]={-0.90860438,-0.40833646,0.087747529};
+		up[]={-0.4064455,0.91283149,0.039252058};
+		aside[]={0.096126758,-3.7252903e-009,0.9953692};
 	};
 };
 binarizationWanted=0;
@@ -13659,8 +13659,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4474.3018,7.3803163,481.90399};
-				angles[]={0,0.1937141,0};
+				position[]={4474.3018,7.4523163,481.90399};
+				angles[]={-0,0.1937141,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13673,7 +13673,6 @@ class Mission
 			};
 			id=740;
 			type="Land_CargoBox_V1_F";
-			atlOffset=-0.072000027;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14605,7 +14604,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4444.5049,6.7414384,456.3168};
+						position[]={4444.5049,6.7414389,456.31699};
 					};
 					side="Independent";
 					flags=7;
@@ -14630,7 +14629,48 @@ class Mission
 					};
 					id=773;
 					type="I_soldier_F";
-					atlOffset=-4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item1
 				{
@@ -16733,7 +16773,6 @@ class Mission
 			{
 			};
 			id=772;
-			atlOffset=-4.7683716e-007;
 		};
 		class Item224
 		{

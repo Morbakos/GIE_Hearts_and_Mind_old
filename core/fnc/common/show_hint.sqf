@@ -115,6 +115,12 @@ private _text = switch (_type) do {
             [" "]
         ];
     };
+    case 22 : {
+        "Vous êtes maintenant interprète";
+    };
+    case 23 : {
+        "Vous n'êtes maintenant plus interprète";
+    };
 };
 
 _text call CBA_fnc_notify;
