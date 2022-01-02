@@ -18,7 +18,7 @@
 		{
 		_markerstr = createMarkerLocal [name _x,position _x];
 		_markerstr setMarkerShapeLocal "ICON";
-		_markerstr setMarkerTypeLocal "o_inf";
+		_markerstr setMarkerTypeLocal "b_inf";
 		_markerstr setMarkerTextLocal name _x;
 		} forEach allPlayers;
 
