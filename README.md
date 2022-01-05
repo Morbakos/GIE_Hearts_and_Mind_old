@@ -47,7 +47,7 @@
   - Pilote
 
 * ALAT :
-  - NH-90 Cargo
+  - Cougar
   - NH-90 Transport
   - EC665 Tigre
 
