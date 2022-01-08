@@ -65,7 +65,7 @@
   - Tireur d'élite
   - Spotter
 
- *(° sous réserve de remplir les critère d'éligibilité au rôle, cf [Les montées en grade](tbd))*
+ *(° sous réserve de remplir les critère d'éligibilité au rôle, cf [Les montées en grade](ranks.md))*
 
 **Version:** `3.0.0`
 
