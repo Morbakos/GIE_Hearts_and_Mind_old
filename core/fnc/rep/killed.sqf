@@ -25,7 +25,8 @@ params ["_unit", "_causeOfDeath", "_killer", "_instigator"];
 
 if (
     !(side group _unit isEqualTo civilian) &&
-    {!isAgent teamMember _unit}
+    {!isAgent teamMember _unit} ||
+    {(typeOf _unit) in ["Rabbit_F", "CUP_Rabbit_Winter"]}
 ) exitWith {};
 
 if (isPlayer _instigator) then {
