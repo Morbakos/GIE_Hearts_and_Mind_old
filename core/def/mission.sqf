@@ -425,6 +425,10 @@ if (isServer) then {
     private _rearming_static =
     [
         //"Static"
+        "B_FR_M2_affut_M1_01",
+        "R3F_FN_MAG58_fixe",
+        "R3F_MMP_STATIC",
+        "RHS_Stinger_AA_pod_D"
     ] + (_allClassSorted select {(
         _x isKindOf "GMG_TriPod" ||
         {_x isKindOf "StaticMortar"} ||
