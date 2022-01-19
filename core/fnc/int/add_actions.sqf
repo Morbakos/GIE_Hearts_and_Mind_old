@@ -216,10 +216,10 @@ _action = ["full_heal_area", "Soigner les unités aux alentours", "", {
         ["Vous avez été soigné par les médecins de la base"] remoteExec ["hint", _x, false];
     } forEach _soldiers;
 }, {true}] call ace_interact_menu_fnc_createAction;
-[btc_medical_tent, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+[btc_medical, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 _action = ["custody", "Transmettre la garde des prisonniers", "", {
-    private _prisonners = allUnits select {(!isPlayer _x) && (_x getVariable ["ace_captives_isHandcuffed", false]) && (_x inArea "btc_prison_court")};
+    private _prisonners = allUnits select {(!isPlayer _x) && (_x getVariable ["ace_captives_isHandcuffed", false]) && (((getPos _x) distance2D (getPos btc_mp_officer)) < 10)};
     private _rep_change = 0.35;
     private _count = count _prisonners;
     {
