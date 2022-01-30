@@ -48,11 +48,11 @@ btc_intro_done = [] spawn btc_fnc_intro;
         }] call CBA_fnc_waitUntilAndExecute;
     };
 
-    hint parseText format [
+    (format [
         "<t color='%1' align='center'>Bonjour %2</t> <br/>Bienvenue à toi sur le serveur du <t color='%1'>GIE</t> ! <br/>Il y a actuellement %3 joueur(s) connecté(s). Passe un bon moment :) <br/><br/>Afin de communiquer avec nous, nous t'invitons à rejoindre notre <t color='%1'>TS</t>: <br/>ts.team-gie.com <br/><br/>Attention, n'oublie pas qu'ici, chacune de tes action a des conséquences sur la mission :) <br/><br/><t color='%1' align='center'>Le Staff de Morpho Bleu</t>", 
         "#B71C1C", 
         name player, 
         (count (switchableUnits + playableUnits))
-    ];
+    ]) call CBA_fnc_notify;
 
 }] call CBA_fnc_waitUntilAndExecute;
