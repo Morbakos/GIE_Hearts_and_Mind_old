@@ -23,6 +23,6 @@ Author:
 if (!isServer) exitWith {};
 
 while {true} do {
-	sleep 60*60;
+	sleep 60*60*60;
 	[] call btc_fnc_db_save;
 };
