@@ -59,3 +59,6 @@ if (btc_p_side_mission_cycle > 0) then {
 if ((profileNamespace getVariable [format ["btc_hm_%1_fobs", worldName], []] findIf {_x select 0 == "Camp FS"}) isEqualTo -1) then {
     [[4570.91,945.693,0], 0, "Camp FS"] call btc_fnc_fob_create_s;
 };
+
+// Auto save
+[] spawn btc_fnc_db_autoSave;
