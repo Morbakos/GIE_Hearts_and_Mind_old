@@ -22,7 +22,10 @@ Author:
 
 if (!isServer) exitWith {};
 
+private _nextSaveTime = 0;
+
 while {true} do {
-	sleep 60*60*60;
+    waitUntil { sleep 1; _nextSaveTime > time };
 	[] call btc_fnc_db_save;
+    _nextSaveTime = time + 60*60;
 };

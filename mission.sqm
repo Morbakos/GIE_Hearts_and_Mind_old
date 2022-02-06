@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=866;
+		nextID=873;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4478.9175,68.066154,381.92746};
-		dir[]={0.3276338,-0.71630818,0.61608392};
-		up[]={0.33633137,0.69778377,0.63243914};
-		aside[]={0.8829152,-4.7730282e-008,-0.46953446};
+		pos[]={4571.1304,41.391029,489.20944};
+		dir[]={0.059872676,-0.49978933,0.8640824};
+		up[]={0.034548841,0.86614323,0.49860021};
+		aside[]={0.99761569,4.8028596e-008,-0.069127455};
 	};
 };
 binarizationWanted=0;
@@ -604,6 +604,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -618,24 +636,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -3263,6 +3263,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this setVariable [""btc_dont_delete"",true];";
 				name="btc_veh_27";
 			};
 			id=297;
@@ -6044,8 +6045,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4587.8228,6.7399998,538.62909};
-				angles[]={0,4.7077169,0};
+				position[]={4587.8232,6.7399998,538.62903};
+				angles[]={0,4.7077112,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6124,8 +6125,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4541.1953,6.7400084,439.05481};
-				angles[]={0,1.5635234,0};
+				position[]={4542,6.7400084,336.12637};
+				angles[]={-0,1.5635234,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6141,8 +6142,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4535.5762,6.8506579,433.3208};
-				angles[]={0,3.1389921,0};
+				position[]={4536.3809,6.8506799,330.39236};
+				angles[]={-0,3.1389921,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6152,15 +6153,14 @@ class Mission
 			};
 			id=370;
 			type="PortableHelipadLight_01_red_F";
-			atlOffset=-2.1934509e-005;
 		};
 		class Item79
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4546.9287,6.8501029,433.37445};
-				angles[]={0,3.1389921,0};
+				position[]={4547.7334,6.8506799,330.44601};
+				angles[]={-0,3.1389921,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6170,15 +6170,14 @@ class Mission
 			};
 			id=371;
 			type="PortableHelipadLight_01_red_F";
-			atlOffset=-0.00057697296;
 		};
 		class Item80
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4546.811,6.8506799,444.77301};
-				angles[]={0,3.1389921,0};
+				position[]={4547.6157,6.8506799,341.84457};
+				angles[]={-0,3.1389921,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6194,8 +6193,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4535.4741,6.8506799,444.69299};
-				angles[]={0,3.1389921,0};
+				position[]={4536.2788,6.8506799,341.76456};
+				angles[]={-0,3.1389921,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6295,8 +6294,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4540.7373,6.7399998,439.68643};
-				angles[]={0,3.1151545,0};
+				position[]={4541.542,6.7399998,336.758};
+				angles[]={-0,3.1151545,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6326,7 +6325,7 @@ class Mission
 		class Item89
 		{
 			dataType="Trigger";
-			position[]={4542.1162,6.7399998,439.10748};
+			position[]={4542.9209,6.7399998,336.17905};
 			class Attributes
 			{
 				onActivation="call{{_x setdammage 0;_x setfuel 1;_x setVehicleAmmo 1;} Foreach thislist;}";
@@ -6346,7 +6345,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4544.2979,6.7399998,421.73499};
+				position[]={4545.1025,6.7399998,318.80655};
 			};
 			id=382;
 			type="SSS_module_AddTransport";
@@ -6482,7 +6481,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4539.6021,6.7414389,438.46198};
-						angles[]={0,1.5600625,0};
+						angles[]={-0,1.5600625,0};
 					};
 					side="Independent";
 					flags=7;
@@ -6580,6 +6579,7 @@ class Mission
 					};
 					id=384;
 					type="I_helipilot_F";
+					atlOffset=4.7683716e-007;
 				};
 				class Item1
 				{
@@ -6587,7 +6587,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4539.6021,6.7414389,438.46198};
-						angles[]={0,1.5600625,0};
+						angles[]={-0,1.5600625,0};
 					};
 					side="Independent";
 					flags=5;
@@ -6685,6 +6685,7 @@ class Mission
 					};
 					id=385;
 					type="I_helipilot_F";
+					atlOffset=4.7683716e-007;
 				};
 			};
 			class Attributes
@@ -7037,6 +7038,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="this setVariable [""btc_dont_delete"",true];";
 				name="btc_veh_28";
 				reportRemoteTargets=1;
 				reportOwnPosition=1;
@@ -12477,6 +12479,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this setVariable [""btc_dont_delete"",true];";
 				name="btc_veh_26";
 			};
 			id=642;
@@ -12858,8 +12861,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4539.6006,9.5481434,438.38492};
-				angles[]={0,1.5600625,0};
+				position[]={4540.4053,9.5481434,335.45648};
+				angles[]={-0,1.5600625,0};
 			};
 			side="Independent";
 			flags=6;
