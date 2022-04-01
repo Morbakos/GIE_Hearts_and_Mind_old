@@ -675,6 +675,7 @@ switch (_p_en) do {
         btc_type_units = btc_type_units - ["I_C_Soldier_Camo_F"];
     };
 };
+btc_type_motorized_armed = btc_type_motorized_armed + ["RHS_M2A3_wd"];
 
 //Chem
 btc_chem_range = 3;
