@@ -264,7 +264,6 @@ if (!isDedicated) then {
     btc_fnc_get_composition = compile preprocessFileLineNumbers "core\fnc\common\get_composition.sqf";
     btc_fnc_checkArea = compile preprocessFileLineNumbers "core\fnc\common\checkArea.sqf";
     btc_fnc_typeOfPreview = compile preprocessFileLineNumbers "core\fnc\common\typeOfPreview.sqf";
-    btc_fnc_tpToSquad = compile preprocessFileLineNumbers "core\fnc\common\teleportToSquad.sqf";
     btc_fnc_interpreter = compile preprocessFileLineNumbers "core\fnc\common\interpreter.sqf";
 
     //CHEM

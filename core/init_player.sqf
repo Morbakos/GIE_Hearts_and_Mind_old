@@ -11,7 +11,6 @@ btc_intro_done = [] spawn btc_fnc_intro;
 [{!isNull player}, {
     [] call compile preprocessFileLineNumbers "core\doc.sqf";
 
-    btc_respawn_marker setMarkerPosLocal player;
     player addRating 9999;
     ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
@@ -24,9 +23,9 @@ btc_intro_done = [] spawn btc_fnc_intro;
     [] call btc_fnc_int_add_actions;
     [] call btc_fnc_int_shortcuts;
 
-    if (player getVariable ["interpreter", false]) then {
+    // if (player getVariable ["interpreter", true]) then {
         player createDiarySubject ["btc_diarylog", localize "STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG"];
-    };
+    // };
 
     switch (btc_p_autoloadout) do {
         case 1: {
@@ -53,12 +52,12 @@ btc_intro_done = [] spawn btc_fnc_intro;
         [
             [format ["<t color='%1' align='center'>Bonjour %2</t>", _color, name player]],
             [format ["Bienvenue à toi sur le serveur du <t color='%1'>GIE</t>", _color]],
-            [format ["Il y a actuellement %1 joueur(s) connecté(s). Passe un bon moment :)", (count (switchableUnits + playableUnits))]],
+            [format ["Il y a actuellement %1 joueur(s) connecté(s). Passe un bon moment :)", (count (switchableUnits + playableUnits) - count entities "HeadlessClient_F")]],
             [format ["Afin de communiquer avec nous, nous t'invitons à rejoindre notre <t color='%1'>TS</t>:", _color]],
             ["ts.team-gie.com"],
             ["Attention, n'oublie pas qu'ici, chacune de tes action a des conséquences sur la mission :)"],
-            [format ["<t color='%1' align='center'>Le Staff de Morpho Bleu</t>", _color]],
-            true
+            [format ["<t color='%1' align='center'>Le Staff de Snow Devils</t>", _color]],
+            false
         ] call CBA_fnc_notify;
     }] call CBA_fnc_waitUntilAndExecute; 
 

@@ -210,7 +210,7 @@ _action = ["full_heal", "Se soigner", "", {
 [btc_medical, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 _action = ["full_heal_area", "Soigner les unités aux alentours", "", {
-    private _soldiers = (btc_medical_tent nearEntities 15) select {isPlayer _x};
+    private _soldiers = (btc_medical nearEntities 15) select {isPlayer _x};
     {
         [objNull, _x] call ace_medical_treatment_fnc_fullHeal;
         ["Vous avez été soigné par les médecins de la base"] remoteExec ["hint", _x, false];

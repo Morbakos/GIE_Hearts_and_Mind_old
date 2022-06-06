@@ -44,6 +44,8 @@ _wreck setPosATL [_pos select 0, _pos select 1, 0];
 _wreck setDir _dir;
 _wreck setVectorUp surfaceNormal _pos;
 
+// [_wreck] call btc_fnc_ied_removeRubbish;
+
 if !(_active) exitWith {[_wreck, _type, objNull]};
 
 private _ied = createMine [selectRandom btc_type_ieds_ace, [_pos select 0, _pos select 1, btc_ied_offset], [], 2];
