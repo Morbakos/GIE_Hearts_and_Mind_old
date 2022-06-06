@@ -229,6 +229,7 @@ btc_fnc_civ_addWP = compile preprocessFileLineNumbers "core\fnc\civ\addWP.sqf";
 
 //IED
 btc_fnc_ied_belt = compile preprocessFileLineNumbers "core\fnc\ied\belt.sqf";
+btc_fnc_ied_removeRubbish = compile preprocessFileLineNumbers "core\fnc\ied\removeRubbish.sqf";
 
 //INT
 btc_fnc_int_orders_give = compile preprocessFileLineNumbers "core\fnc\int\orders_give.sqf";

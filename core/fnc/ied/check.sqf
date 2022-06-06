@@ -27,8 +27,6 @@ params [
 private _array = _city getVariable ["ieds", []];
 if (_array isEqualTo []) exitWith {};
 
-[format ["CITY ID %1 HAS IED: ", _city getVariable "id"], __FILE__, [btc_debug, false]] call btc_fnc_debug_message;
-
 private _ieds = _array apply {_x call btc_fnc_ied_create};
 
 if (btc_debug) then {
