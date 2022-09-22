@@ -236,36 +236,3 @@ _action = ["setInterpreter","Devenir interprète","",{[player, true] call btc_fn
 [btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 _action = ["removeInterpreter","Quitte l'interprète","",{[player, false] call btc_fnc_interpreter;}, {player getVariable ["interpreter", false]}] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-// Suppression manuelle des wreck
-_action = ["cleanRubbish", "Enlever les dechets", "", 
-    {
-        // Déterminer la ville où se situe le joueur
-        private _allObjects = allSimpleObjects []; 
-        _allObjects = _allObjects apply {[_x distance _player, _x]}; 
-        _allObjects sort true; 
-
-        private _nearestObject = _allObjects select 0 select 1;
-
-        _nearestObject call btc_fnc_ied_removeRubbish;
-    }, 
-    {
-        // Déterminer la ville où se situe le joueur
-        private _allCities = allSimpleObjects ["CBA_NamespaceDummy"]; 
-        _allCities = _allCities apply {[_x distance _player, _x]}; 
-        _allCities sort true; 
- 
-        private _cityIeds = (_allCities select 0 select 1) getVariable ["ieds", []]; 
-        _cityIeds = _cityIeds apply {[(_x select 0) distance _player, _x]}; 
-        _cityIeds sort true; 
-        private _nearestIed = (_cityIeds select 0); 
- 
-        private _canRemoveRubbish = false; 
-        if ((((_nearestIed select 1 select 0) distance _player) < 5) && ("ToolKit" in (items _player))) then { 
-            _canRemoveRubbish = true; 
-        }; 
- 
-        _canRemoveRubbish;
-    }
-] call ace_interact_menu_fnc_createAction;
-[player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;

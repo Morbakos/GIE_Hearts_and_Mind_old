@@ -10,6 +10,7 @@ btc_intro_done = [] spawn btc_fnc_intro;
 
 [{!isNull player}, {
     [] call compile preprocessFileLineNumbers "core\doc.sqf";
+    [] call compile preprocessFileLineNumbers "core\fnc\info\hostileVehicles.sqf";
 
     player addRating 9999;
     ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
