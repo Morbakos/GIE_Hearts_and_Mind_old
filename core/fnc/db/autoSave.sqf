@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_db_autoSave
+Function: gie_db_fnc_autoSave
 
 Description:
     Save the current game every hour
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_db_autoSave;
+        [] call gie_db_fnc_autoSave;
     (end)
 
 Author:
@@ -26,6 +26,6 @@ private _nextSaveTime = 0;
 
 while {true} do {
     waitUntil { sleep 1; _nextSaveTime > time };
-	[] call btc_fnc_db_save;
+	[] call btc_db_fnc_save;
     _nextSaveTime = time + 60*60;
 };

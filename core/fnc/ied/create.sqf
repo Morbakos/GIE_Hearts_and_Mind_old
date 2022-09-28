@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_ied_create
+Function: btc_ied_fnc_create
 
 Description:
     Create wreck and add an IED when it is not a fake. True IED is added to the btc_ied_list to check if player is around.
@@ -19,7 +19,7 @@ Returns:
 
 Examples:
     (begin example)
-        [_wreck, _type, _ied] = [[0,0,0], "a3\armor_f_beta\apc_tracked_01\apc_tracked_01_rcws_f.p3d", 90, true] call btc_fnc_ied_create;
+        [_wreck, _type, _ied] = [[0,0,0], "a3\armor_f_beta\apc_tracked_01\apc_tracked_01_rcws_f.p3d", 90, true] call btc_ied_fnc_create;
     (end)
 
 Author:
@@ -36,15 +36,13 @@ params [
 ];
 
 if (btc_debug_log) then {
-    [format ["%1", _this], __FILE__, [false]] call btc_fnc_debug_message;
+    [format ["%1", _this], __FILE__, [false]] call btc_debug_fnc_message;
 };
 
 private _wreck = createSimpleObject [_type, _pos];
 _wreck setPosATL [_pos select 0, _pos select 1, 0];
 _wreck setDir _dir;
 _wreck setVectorUp surfaceNormal _pos;
-
-// [_wreck] call btc_fnc_ied_removeRubbish;
 
 if !(_active) exitWith {[_wreck, _type, objNull]};
 

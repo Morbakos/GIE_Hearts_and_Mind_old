@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_interpreter
+Function: gie_fnc_interpreter
 
 Description:
     Give training to player
@@ -14,7 +14,7 @@ Returns:
 
 Examples:
     (begin example)
-        [player, true] call btc_fnc_interpreter;
+        [player, true] call gie_fnc_interpreter;
     (end)
 
 Author:
