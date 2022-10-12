@@ -234,6 +234,7 @@ btc_fnc_get_class = compileScript ["core\fnc\common\get_class.sqf"];
 btc_fnc_randomize_pos = compileScript ["core\fnc\common\randomize_pos.sqf"];
 btc_fnc_getHouses = compileScript ["core\fnc\common\getHouses.sqf"];
 btc_fnc_house_addWP_loop = compileScript ["core\fnc\common\house_addWP_loop.sqf"];
+gie_fnc_find_nearest_player = compile preprocessFileLineNumbers "core\fnc\common\findNearestPlayer.sqf";
 
 //CHEM
 btc_chem_fnc_damage = compileScript ["core\fnc\chem\damage.sqf"];
@@ -421,6 +422,10 @@ if (!isDedicated) then {
 
     // ZEUS
     gie_zeus_fnc_addZeusToPlayerRemote = compileScript ["core\fnc\zeus\addZeusToPlayerRemote.sqf"];
+
+    // PRESENCE (Discord)
+    gie_presence_fnc_init = compileScript ["core\fnc\presence\init.sqf"];
+    gie_presence_fnc_evaluatePresenceContent = compileScript ["core\fnc\presence\evaluatePresenceContent.sqf"];
 };
 
 /////////////////////HEADLESS\\\\\\\\\\\\\\\\\\\\\
