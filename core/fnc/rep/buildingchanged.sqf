@@ -32,6 +32,10 @@ private _classname = toUpper typeOf _from;
 private _malus = [btc_rep_malus_building_damaged, btc_rep_malus_building_destroyed] select _isRuin;
 private _skipCategories = false;
 
+// If no player is within a 1km radius, don't affect reputation
+([getPos _from] call gie_fnc_find_nearest_player) params ["_nearestPlayer", "_distance"];
+if (_distance > 1000) exitWith {};
+
 // Accept only static, terrain buildings, discard any dynamically created ones but keep already damaged buildings.
 if ((getObjectType _from != 1) && !(_from in btc_buildings_changed)) exitWith {};
 

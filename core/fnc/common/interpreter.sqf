@@ -28,8 +28,8 @@ if (isNull _unit) exitWith {};
 
 if (_add isEqualTo true) then {
     _unit setVariable ["interpreter", true, true];
-    [22] call btc_fnc_show_hint;
+    [25] call btc_fnc_show_hint;
 } else {
     _unit setVariable ["interpreter", false, true];
-    [23] call btc_fnc_show_hint;
+    [26] call btc_fnc_show_hint;
 };

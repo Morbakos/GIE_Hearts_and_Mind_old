@@ -124,6 +124,12 @@ private _text = switch (_type) do {
     case 24 : {
         format [localize "STR_BTC_HAM_O_COMMON_TICKETSLEFT", _custom];
     };
+    case 25 : {
+        "Vous êtes maintenant interprète";
+    };
+    case 26 : {
+        "Vous n'êtes maintenant plus interprète";
+    };
 };
 
 _text call CBA_fnc_notify;
