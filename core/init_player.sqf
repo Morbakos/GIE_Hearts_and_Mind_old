@@ -71,6 +71,8 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
             [format ["<t color='%1' align='center'>Le Staff</t>", _color]],
             false
         ] call CBA_fnc_notify;
+
+        [] spawn gie_presence_fnc_init;
     }] call CBA_fnc_waitUntilAndExecute;
 
 }] call CBA_fnc_waitUntilAndExecute;
